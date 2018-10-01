@@ -1,0 +1,35 @@
+@mixin border {
+    background-color: pink;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+*{
+    box-sizing: border-box;
+}
+.debug {
+    border: 5px solid red;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.pink{
+    @include border();
+ }
+ .text{
+    @include border();
+    text-align: center;
+ }
+/* .none {
+     border:none;
+     background-color: none;
+ }*/
+ .Bloc1{
+     order: 2;
+ }
+ .Bloc2{
+     order:5;
+ }
+ .Bloc3{
+     order: 4;
+ }
