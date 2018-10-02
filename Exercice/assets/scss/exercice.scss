@@ -1,29 +1,38 @@
 @mixin border {
-    background-color: pink;
     border: 2px solid black;
     border-radius: 8px;
+}
+@mixin bgd ($bgd){
+    background-color: $bgd;
 }
 *{
     box-sizing: border-box;
 }
-.debug {
-    border: 5px solid red;
-}
+
 .row {
     display: flex;
     flex-direction: row;
 }
 .pink{
     @include border();
- }
- .text{
-    @include border();
+    @include bgd(pink);
     text-align: center;
+}
+ .purple {
+     @include border();
+     @include bgd(purple);
+     text-align: center;
+}
+ .blue {
+     @include border();
+     @include bgd(lightblue);
+     text-align: center;
  }
-/* .none {
-     border:none;
-     background-color: none;
- }*/
+.text {
+    @include bgd(lightblue);
+    border: 2px solid black;    
+}
+
  .Bloc1{
      order: 2;
  }
